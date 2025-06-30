@@ -523,6 +523,7 @@ const LiveLocationWithMarker = () => {
     }
   }, [socket, connectedClientId, driverId]);
 
+  
   return (
     <>
       {!driverId && (
