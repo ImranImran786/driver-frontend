@@ -437,7 +437,7 @@ const LiveLocationWithMarker = () => {
   useEffect(() => {
     if (!driverId) return;
 
-    const socketInstance = io("http://localhost:5000");
+    const socketInstance = io("https://location-backend-production-058e.up.railway.app/");
     setSocket(socketInstance);
 
     socketInstance.on("connect", () => {
