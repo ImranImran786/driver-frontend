@@ -61,7 +61,7 @@
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const { data } = await axios.post("http://localhost:5005/api/auth/register", {
+//             const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/register", {
 //                 name,
 //                 fatherName,
 //                 email,
@@ -144,7 +144,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const { data } = await axios.post("http://localhost:5005/api/auth/register", {
+//       const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/register", {
 //         name,
 //         fatherName,
 //         email,
@@ -341,7 +341,7 @@ const Signup = () => {
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5005/api/auth/register", {
+      const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/register", {
         name,
         fatherName,
         email,
@@ -374,7 +374,7 @@ const Signup = () => {
     formData.append("image_name", imageName);
 
     try {
-      const res = await fetch("https://dd96-2407-aa80-116-6313-50cd-ac3b-36f7-eea5.ngrok-free.app/register", {
+      const res = await fetch("https://database-production-3a68.up.railway.app/register", {
         method: "POST",
         body: formData,
       });
