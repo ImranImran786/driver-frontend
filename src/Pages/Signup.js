@@ -374,7 +374,7 @@ const Signup = () => {
     formData.append("image_name", imageName);
 
     try {
-      const res = await fetch("https://5c60-202-165-233-9.ngrok-free.app/register", {
+      const res = await fetch("https://6bdc-2407-aa80-116-d232-5981-c294-4aee-b533.ngrok-free.app/register", {
         method: "POST",
         body: formData,
       });
