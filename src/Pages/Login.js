@@ -87,7 +87,7 @@
 //   const handleLoginSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const { data } = await axios.post("http://localhost:5005/api/auth/login", {
+//       const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/login", {
 //         email,
 //         password,
 //       });
@@ -98,7 +98,7 @@
 //       localStorage.setItem("loginVerified", "true");
 
 //       await axios.put(
-//         `http://localhost:5005/api/users/update-status/${data.driverId}`,
+//         `https://database-production-3a68.up.railway.app/api/users/update-status/${data.driverId}`,
 //         { status: "Available" },
 //         {
 //           headers: {
@@ -360,7 +360,7 @@
 //   const handleLoginSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const { data } = await axios.post("http://localhost:5005/api/auth/login", {
+//       const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/login", {
 //         email,
 //         password,
 //       });
@@ -373,7 +373,7 @@
 //       setLoginAttempts(0);
 
 //       await axios.put(
-//         `http://localhost:5005/api/users/update-status/${data.driverId}`,
+//         `https://database-production-3a68.up.railway.app/api/users/update-status/${data.driverId}`,
 //         { status: "Available" },
 //         {
 //           headers: {
@@ -642,7 +642,7 @@ export default function Login() {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5005/api/auth/login", {
+      const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/login", {
         email,
         password,
       });
@@ -655,7 +655,7 @@ export default function Login() {
       setLoginAttempts(0);
 
       await axios.put(
-        `http://localhost:5005/api/users/update-status/${data.driverId}`,
+        `https://database-production-3a68.up.railway.app/api/users/update-status/${data.driverId}`,
         { status: "Available" },
         {
           headers: {
