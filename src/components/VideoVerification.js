@@ -9,7 +9,7 @@
 //   const [driverId] = useState("driver123");
 
 //   useEffect(() => {
-//     socket.current = io("http://localhost:5005/");
+//     socket.current = io("https://database-production-3a68.up.railway.app/");
 
 //     socket.current.emit("register_driver", driverId);
 //     console.log(`📌 Driver registered: ${driverId}`);
@@ -86,7 +86,7 @@ const VideoVerification = () => {
   const [clientEmails, setClientEmails] = useState([]);
 
   useEffect(() => {
-    socket.current = io("http://localhost:5005/", {
+    socket.current = io("https://database-production-3a68.up.railway.app/", {
       transports: ["websocket", "polling"],
     });
 
