@@ -89,7 +89,7 @@
 //   const [connectedClientId, setConnectedClientId] = useState(null);
 
 //   useEffect(() => {
-//     const newSocket = io("http://localhost:5005/driver"); // Connect to /driver namespace
+//     const newSocket = io("https://database-production-3a68.up.railway.app/driver"); // Connect to /driver namespace
 //     setSocket(newSocket);
 
 //     newSocket.on("connect", () => {
@@ -302,7 +302,7 @@
 //   const [connectedClientId, setConnectedClientId] = useState(null);
 
 //   useEffect(() => {
-//     const socketInstance = io("http://localhost:5005"); // must match backend
+//     const socketInstance = io("https://database-production-3a68.up.railway.app"); // must match backend
 //     setSocket(socketInstance);
 
 //     socketInstance.on("connect", () => {
