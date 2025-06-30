@@ -374,7 +374,7 @@ const Signup = () => {
     formData.append("image_name", imageName);
 
     try {
-      const res = await fetch("https://database-production-3a68.up.railway.app/register", {
+      const res = await fetch("https://5c60-202-165-233-9.ngrok-free.app/register", {
         method: "POST",
         body: formData,
       });
