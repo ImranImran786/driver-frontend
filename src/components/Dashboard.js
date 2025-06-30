@@ -30,7 +30,7 @@
 
 //         const fetchClientData = async () => {
 //             try {
-//                 const { data } = await axios.get(`http://localhost:5005/api/users/${userId}`, {
+//                 const { data } = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${userId}`, {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`,
 //                     },
@@ -49,7 +49,7 @@
 //     const handleLogout = async () => {
 //         try {
 //             // Update status to Offline before clearing storage
-//             await axios.put(`http://localhost:5005/api/users/update-status/${userId}`, {
+//             await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${userId}`, {
 //                 status: "Offline",
 //             });
 
@@ -158,7 +158,7 @@ const Dashboard = () => {
 
         const fetchClientData = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5005/api/users/${userId}`, {
+                const { data } = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -177,7 +177,7 @@ const Dashboard = () => {
     const handleLogout = async () => {
         try {
             // Update status to Offline before clearing storage
-            await axios.put(`http://localhost:5005/api/users/update-status/${userId}`, {
+            await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${userId}`, {
                 status: "Offline",
             });
 
@@ -284,7 +284,7 @@ export default Dashboard;
 
 //         const fetchClientData = async () => {
 //             try {
-//                 const { data } = await axios.get(`http://localhost:5005/api/users/${userId}`, {
+//                 const { data } = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${userId}`, {
 //                     headers: { Authorization: `Bearer ${token}` },
 //                 });
 //                 setClientData(data);
@@ -298,7 +298,7 @@ export default Dashboard;
 
 //     const handleLogout = async () => {
 //         try {
-//             await axios.put(`http://localhost:5005/api/users/update-status/${userId}`, {
+//             await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${userId}`, {
 //                 status: "Offline",
 //             });
 
