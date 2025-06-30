@@ -1,4 +1,4 @@
-export const apiEndPoint = "https://5c60-202-165-233-9.ngrok-free.app";
+export const apiEndPoint = "https://6bdc-2407-aa80-116-d232-5981-c294-4aee-b533.ngrok-free.app";
 
 export async function recognizeFace(dataURL) {
   try {
