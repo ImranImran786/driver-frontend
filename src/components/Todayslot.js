@@ -15,7 +15,7 @@
 //     if (!id || clients[id]) return; // Skip if already fetched
 
 //     try {
-//       const res = await axios.get(`http://localhost:5005/api/users/${id}`, {
+//       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -40,7 +40,7 @@
 //     const fetchData = async () => {
 //       try {
 //         const res = await axios.get(
-//           `http://localhost:5005/api/assignments/driver-assignments/${driverId}`,
+//           `https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`,
 //           {
 //             headers: {
 //               Authorization: `Bearer ${token}`,
@@ -152,7 +152,7 @@
 //   useEffect(() => {
 //     const fetchTodaySlots = async () => {
 //       try {
-//         const res = await axios.get(`http://localhost:5005/api/assignments/driver-assignments/${driverId}`);
+//         const res = await axios.get(`https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`);
 //         const assignments = res.data || [];
 //         const today = new Date().toDateString();
 
@@ -180,7 +180,7 @@
 
 //         for (const id of uniqueClientIds) {
 //   try {
-//     const clientRes = await axios.get(`http://localhost:5005/api/users/${id}`, {
+//     const clientRes = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
 //       headers: {
 //         Authorization: `Bearer ${localStorage.getItem('userToken')}`,  // ✅ Pass stored token
 //       },
@@ -273,7 +273,7 @@ const TodaySlots = ({ driverId }) => {
         if (!id || clients[id]) return;
 
         try {
-            const res = await axios.get(`http://localhost:5005/api/users/${id}`, {
+            const res = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -295,7 +295,7 @@ const TodaySlots = ({ driverId }) => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    `http://localhost:5005/api/assignments/driver-assignments/${driverId}`,
+                    `https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
