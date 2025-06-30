@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5005/driver'); // Update to match your backend
+const socket = io('https://database-production-3a68.up.railway.app/driver'); // Update to match your backend
 
 const About = () => {
   const [clientMessage, setClientMessage] = useState('');
