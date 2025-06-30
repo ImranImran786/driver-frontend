@@ -1,251 +1,50 @@
 // import React from "react";
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <>
-//       {/* Mobile Menu */}
-//       <div className="site-mobile-menu site-navbar-target">
-//         <div className="site-mobile-menu-header">
-//           <div className="site-mobile-menu-close mt-3">
-//             <span className="icon-close2 js-menu-toggle"></span>
-//           </div>
-//         </div>
-//         <div className="site-mobile-menu-body"></div>
-//       </div>
-
-//       {/* Navbar Wrap */}
-//       <div className="site-navbar-wrap">
-//         {/* Top Bar */}
-//         <div className="site-navbar-top bg-dark text-light">
-//           <div className="container py-2">
-//             <div className="row align-items-center">
-//               <div className="col-md-6">
-//                 <span className="mr-3">
-//                   <i className="fas fa-envelope"></i> info@domain.com
-//                 </span>
-//                 <span>
-//                   <i className="fas fa-phone"></i> +1 234 567 8910
-//                 </span>
-//               </div>
-//               <div className="col-md-6 text-right">
-//                 <a href="#" className="text-light p-2">
-//                   <i className="fab fa-twitter"></i>
-//                 </a>
-//                 <a href="#" className="text-light p-2">
-//                   <i className="fab fa-facebook"></i>
-//                 </a>
-//                 <a href="#" className="text-light p-2">
-//                   <i className="fab fa-linkedin"></i>
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Main Navbar */}
-//         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//           <div className="container">
-//             <Link to="/" className="navbar-brand">
-//               MyBrand
-//             </Link>
-//             <button
-//               className="navbar-toggler"
-//               type="button"
-//               data-bs-toggle="collapse"
-//               data-bs-target="#navbarNav"
-//               aria-controls="navbarNav"
-//               aria-expanded="false"
-//               aria-label="Toggle navigation"
-//             >
-//               <span className="navbar-toggler-icon"></span>
-//             </button>
-//             <div className="collapse navbar-collapse" id="navbarNav">
-//               <ul className="navbar-nav ml-auto">
-//                 <li className="nav-item">
-//                   <Link to="/" className="nav-link">
-//                     Home
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/about" className="nav-link">
-//                     About
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/deepface" className="nav-link">
-//                     Deepface
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/login" className="nav-link">
-//                     login
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/signup" className="nav-link">
-//                     signup
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/verfication" className="nav-link">
-//                     verfication
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/livelocation" className="nav-link">
-//                     LL
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/driver/video" className="nav-link">
-//                     Video Verification
-//                   </Link>
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//         </nav>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-
-// import React, { useState, useEffect } from "react";
 // import { Link, useNavigate } from "react-router-dom";
 
 // const Navbar = () => {
-//   const [isLoggedIn, setIsLoggedIn] = useState(null); // null = unknown yet
-//   const navigate = useNavigate();
+//     const navigate = useNavigate();
+//     const isAuthenticated = !!localStorage.getItem("userToken");
 
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     setIsLoggedIn(!!token);
-//   }, []);
+//     const handleLogout = () => {
+//         localStorage.removeItem("userToken");
+//         navigate("/login"); // Redirect to login page
+//     };
 
-//   const handleLogout = (e) => {
-//     e.preventDefault();
-//     localStorage.removeItem("token");
-//     setIsLoggedIn(false);
-//     navigate("/login");
-//   };
-
-//   // Wait until we know if user is logged in
-//   if (isLoggedIn === null) return null;
-
-//   return (
-//     <>
-//       {/* Mobile Menu */}
-//       <div className="site-mobile-menu site-navbar-target">
-//         <div className="site-mobile-menu-header">
-//           <div className="site-mobile-menu-close mt-3">
-//             <span className="icon-close2 js-menu-toggle"></span>
-//           </div>
-//         </div>
-//         <div className="site-mobile-menu-body"></div>
-//       </div>
-
-//       {/* Navbar Wrap */}
-//       <div className="site-navbar-wrap">
-//         {/* Top Bar */}
-//         <div className="site-navbar-top bg-dark text-light">
-//           <div className="container py-2">
-//             <div className="row align-items-center">
-//               <div className="col-md-6">
-//                 <span className="mr-3">
-//                   <i className="fas fa-envelope"></i> info@domain.com
-//                 </span>
-//                 <span>
-//                   <i className="fas fa-phone"></i> +1 234 567 8910
-//                 </span>
-//               </div>
-//               <div className="col-md-6 text-right">
-//                 <a href="#" className="text-light p-2">
-//                   <i className="fab fa-twitter"></i>
-//                 </a>
-//                 <a href="#" className="text-light p-2">
-//                   <i className="fab fa-facebook"></i>
-//                 </a>
-//                 <a href="#" className="text-light p-2">
-//                   <i className="fab fa-linkedin"></i>
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Main Navbar */}
-//         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//           <div className="container">
-//             <Link to="/" className="navbar-brand">
-//               MyBrand
-//             </Link>
-//             <button
-//               className="navbar-toggler"
-//               type="button"
-//               data-bs-toggle="collapse"
-//               data-bs-target="#navbarNav"
-//               aria-controls="navbarNav"
-//               aria-expanded="false"
-//               aria-label="Toggle navigation"
-//             >
-//               <span className="navbar-toggler-icon"></span>
-//             </button>
-
-//             <div className="collapse navbar-collapse" id="navbarNav">
-//               <ul className="navbar-nav ml-auto">
-//                 <li className="nav-item">
-//                   <Link to="/" className="nav-link">
-//                     Home
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/about" className="nav-link">
-//                     About
-//                   </Link>
-//                 </li>
-
-//                     <li className="nav-item">
-//                       <Link to="/login" className="nav-link">
-//                         Login
-//                       </Link>
-//                     </li>
-//                     <li className="nav-item">
-//                       <Link to="/signup" className="nav-link">
-//                         Signup
-//                       </Link>
-//                     </li>
-//                   <li className="nav-item">
-//                     <Link to="#" className="nav-link" onClick={handleLogout}>
-//                       Logout
-//                     </Link>
-//                   </li>
-
-//                 <li className="nav-item">
-//                   <Link to="/livelocation" className="nav-link">
-//                     LL
-//                   </Link>
-//                 </li>
-//                 <li className="nav-item">
-//                   <Link to="/driver/video" className="nav-link">
-//                     Video Verification
-//                   </Link>
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
+    
+//     return (
+//         <nav className="navbar">
+//             <h2 className="logo">Driver Panel</h2>
+//             <ul className="nav-links">
+//                 <li><Link to="/"></Link></li>
+//                 {isAuthenticated ? (
+//                     <>
+//                         <li><Link to="/dashboard">Dashboard</Link></li>
+//                         {/* <li><button onClick={handleLogout}>Logout</button></li> */}
+//                     </>
+//                 ) : (
+//                     <>
+//                     <li><Link to="/login">Login</Link></li>
+//                     <li><Link to="/signup">signup</Link></li>
+//                     </>
+//                 )}
+//             </ul>
 //         </nav>
-//       </div>
-//     </>
-//   );
+//     );
 // };
 
 // export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -259,24 +58,55 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("userToken");
-        navigate("/login"); // Redirect to login page
+        navigate("/login");
     };
 
     
+
+    const navbarStyle = {
+        backgroundColor: "#2c3e50",
+        color: "white",
+        padding: "25px",
+        display: "flex",
+        justifyContent: "center",  // ✅ center logo
+        alignItems: "center",
+        position: "relative",
+    };
+
+    const logoStyle = {
+        fontSize: "24px",
+        fontWeight: "bold",
+        margin: 0,
+    };
+
+    const navLinksStyle = {
+        position: "absolute",
+        right: "20px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        display: "flex",
+        gap: "15px",
+        listStyle: "none",
+    };
+
+    const linkStyle = {
+        color: "white",
+        textDecoration: "none",
+        fontSize: "16px",
+    };
+    
+
     return (
-        <nav className="navbar">
-            <h2 className="logo">Driver Panel</h2>
-            <ul className="nav-links">
-                <li><Link to="/"></Link></li>
+        <nav style={navbarStyle}>
+            <h2 style={logoStyle}>Driver Panel</h2>
+            <ul style={navLinksStyle}>
+                <li><Link to="/" style={linkStyle}></Link></li>
                 {isAuthenticated ? (
-                    <>
-                        <li><Link to="/dashboard">Dashboard</Link></li>
-                        {/* <li><button onClick={handleLogout}>Logout</button></li> */}
-                    </>
+                    <li><Link to="/dashboard" style={linkStyle}>Dashboard</Link></li>
                 ) : (
                     <>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/signup">signup</Link></li>
+                        <li><Link to="/login" style={linkStyle}>Login</Link></li>
+                        <li><Link to="/signup" style={linkStyle}>Signup</Link></li>
                     </>
                 )}
             </ul>
