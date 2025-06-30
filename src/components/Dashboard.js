@@ -389,10 +389,7 @@ const Dashboard = () => {
                                 </div>
 
 
-                                {/* ✅ Car image shown only on mobile and above client card */}
-                                <div className="car-image-mobile">
-                                    <img src="/images1.png" alt="Car" className="car-image" />
-                                </div>
+                            
                             </>
                         ) : (
                             <p className="loading-text">Loading Driver data...</p>
