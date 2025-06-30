@@ -25,7 +25,7 @@
 
 // //   const updateDriverStatus = async (status) => {
 // //     try {
-// //       await axios.put(`http://localhost:5005/api/users/update-status/${driverId}`, { status });
+// //       await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${driverId}`, { status });
 // //     } catch (err) {
 // //       console.error("Failed to update driver status", err.message);
 // //     }
@@ -36,7 +36,7 @@
 // //     if (!id || clients[id]) return;
 
 // //     try {
-// //       const res = await axios.get(`http://localhost:5005/api/users/${id}`, {
+// //       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
 // //         headers: {
 // //           Authorization: `Bearer ${token}`,
 // //         },
@@ -56,7 +56,7 @@
 
 // //   const fetchAssignments = async () => {
 // //     try {
-// //       const res = await axios.get(`http://localhost:5005/api/assignments/driver-assignments/${driverId}`, {
+// //       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`, {
 // //         headers: { Authorization: `Bearer ${token}` },
 // //       });
 // //       const data = res.data || [];
@@ -149,7 +149,7 @@
 
 // //     try {
 // //       const res = await axios.post(
-// //         'http://localhost:5005/api/assignments/extend-slot',
+// //         'https://database-production-3a68.up.railway.app/api/assignments/extend-slot',
 // //         {
 // //           assignmentId,
 // //           slotIndex,
@@ -372,7 +372,7 @@
 
 //   const updateDriverStatus = async (status) => {
 //     try {
-//       await axios.put(`http://localhost:5005/api/users/update-status/${driverId}`, { status });
+//       await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${driverId}`, { status });
 //     } catch (err) {
 //       console.error("Failed to update driver status", err.message);
 //     }
@@ -383,7 +383,7 @@
 //     if (!id || clients[id]) return;
 
 //     try {
-//       const res = await axios.get(`http://localhost:5005/api/users/${id}`, {
+//       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -403,7 +403,7 @@
 
 //   const fetchAssignments = async () => {
 //     try {
-//       const res = await axios.get(`http://localhost:5005/api/assignments/driver-assignments/${driverId}`, {
+//       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       const data = res.data || [];
@@ -464,7 +464,7 @@
 
 //     try {
 //       await axios.post(
-//         'http://localhost:5005/api/assignments/extend-slot',
+//         'https://database-production-3a68.up.railway.app/api/assignments/extend-slot',
 //         {
 //           assignmentId,
 //           slotIndex,
@@ -633,7 +633,7 @@
 
 //   const updateDriverStatus = async (status) => {
 //     try {
-//       await axios.put(`http://localhost:5005/api/users/update-status/${driverId}`, { status });
+//       await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${driverId}`, { status });
 //     } catch (err) {
 //       console.error("Failed to update driver status", err.message);
 //     }
@@ -644,7 +644,7 @@
 //     if (!id || clients[id]) return;
 
 //     try {
-//       const res = await axios.get(`http://localhost:5005/api/users/${id}`, {
+//       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -664,7 +664,7 @@
 
 //   const fetchAssignments = async () => {
 //     try {
-//       const res = await axios.get(`http://localhost:5005/api/assignments/driver-assignments/${driverId}`, {
+//       const res = await axios.get(`https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 
@@ -714,7 +714,7 @@
 //   const handleMarkCompleted = async (assignmentId, slotIndex) => {
 //     try {
 //       await axios.put(
-//         `http://localhost:5005/api/assignments/complete-slot`,
+//         `https://database-production-3a68.up.railway.app/api/assignments/complete-slot`,
 //         { assignmentId, slotIndex },
 //         {
 //           headers: { Authorization: `Bearer ${token}` },
@@ -883,7 +883,7 @@ const TimeSlot = ({ driverId }) => {
 
   const updateDriverStatus = async (status) => {
     try {
-      await axios.put(`http://localhost:5005/api/users/update-status/${driverId}`, { status });
+      await axios.put(`https://database-production-3a68.up.railway.app/api/users/update-status/${driverId}`, { status });
     } catch (err) {
       console.error("Failed to update driver status", err.message);
     }
@@ -894,7 +894,7 @@ const TimeSlot = ({ driverId }) => {
     if (!id || clients[id]) return;
 
     try {
-      const res = await axios.get(`http://localhost:5005/api/users/${id}`, {
+      const res = await axios.get(`https://database-production-3a68.up.railway.app/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -914,7 +914,7 @@ const TimeSlot = ({ driverId }) => {
 
   const fetchAssignments = async () => {
     try {
-      const res = await axios.get(`http://localhost:5005/api/assignments/driver-assignments/${driverId}`, {
+      const res = await axios.get(`https://database-production-3a68.up.railway.app/api/assignments/driver-assignments/${driverId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -963,7 +963,7 @@ const TimeSlot = ({ driverId }) => {
   const handleMarkCompleted = async (assignmentId, slotIndex) => {
     try {
       await axios.put(
-        `http://localhost:5005/api/assignments/complete-slot`,
+        `https://database-production-3a68.up.railway.app/api/assignments/complete-slot`,
         { assignmentId, slotIndex },
         {
           headers: { Authorization: `Bearer ${token}` },
