@@ -20,7 +20,7 @@ export default function FaceRegister() {
     formData.append("image_name", imageName);
 
     try {
-      const res = await fetch("https://6bdc-2407-aa80-116-d232-5981-c294-4aee-b533.ngrok-free.app", {
+      const res = await fetch("https://4b17-116-0-51-50.ngrok-free.app", {
         method: "POST",
         body: formData,
       });
