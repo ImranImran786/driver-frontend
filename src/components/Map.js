@@ -437,7 +437,12 @@ const LiveLocationWithMarker = () => {
   useEffect(() => {
     if (!driverId) return;
 
-    const socketInstance = io("https://location-backend-production-058e.up.railway.app/");
+    // const socketInstance = io("https://location-backend-production-058e.up.railway.app/");
+    const socketInstance = io("https://location-backend-production-058e.up.railway.app", {
+  transports: ["websocket"],      // ✅ Only use WebSocket (no polling)
+  withCredentials: true           // ✅ Allow CORS with cookies if needed
+});
+
     setSocket(socketInstance);
 
     socketInstance.on("connect", () => {
